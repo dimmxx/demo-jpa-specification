@@ -20,13 +20,12 @@ public class Phone {
     @Column
     private String phoneNumber;
 
-    @Column
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "phone_type_id")
     private PhoneType phoneType;
-
-
-
-
-
-
+    
 }

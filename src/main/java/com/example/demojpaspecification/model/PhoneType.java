@@ -16,17 +16,11 @@ public class PhoneType {
     @Column
     private Long id;
 
-    @Column(columnDefinition = "smallint")
-    @Enumerated(EnumType.ORDINAL)
-    private PhoneTypesEnum phoneTypesEnum;
+    @Column
+    @Enumerated(EnumType.STRING)
+    private PhoneTypeEnum phoneTypeEnum;
 
     @Column
     private String description;
 
-}
-
-enum PhoneTypesEnum {
-    HOME,
-    WORK,
-    MOBILE
 }

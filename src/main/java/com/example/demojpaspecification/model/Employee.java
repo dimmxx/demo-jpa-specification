@@ -26,6 +26,6 @@ public class Employee {
     @Column
     private int age;
 
-    @OneToMany
-    private List<Phone> phoneList;
+    @OneToMany(mappedBy = "employee")
+    private List<Phone> phones;
 }
